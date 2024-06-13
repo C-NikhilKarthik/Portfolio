@@ -2,32 +2,174 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: August;
+  src: url("/fonts/August-Bold.woff") format("woff");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: Clash;
+  src: url("/fonts/ClashDisplay-Regular.otf") format("opentype");
+}
+
+:root {
+  --foreground-rgb: #0a192f;
+  --background-rgb: #e6f1ff;
+  --translate-before1: 0;
+  --translate-before2: 0;
+  --translate-before3: 0;
+  --color1: #6c757d;
+  --color2: #adb5bd;
+  --color3: #343a40;
+}
+
+.font-august {
+  font-family: August, sans-serif;
+}
+
+.font-clash {
+  font-family: Clash, sans-serif;
+}
+
+.header1 {
+  font-family: August, sans-serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.2vw;
+  width: 100%;
+  line-height: 1.5rem;
+  height: clamp(2.5rem, 5vw, 5rem);
+  margin-bottom: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #212529;
+}
+
+.header-main {
+  font-family: August, sans-serif;
+  color: #0a192f;
+  -webkit-text-stroke: 2.5px #6c757d;
+  font-size: min(18rem, 16vw);
+  height: min(27rem, 20vw);
+  letter-spacing: -0.2vw;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  margin-top: -2vh;
+  /* text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2),
+    0 0 40px var(--color3); */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-rgb);
+  background: var(--background-rgb);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.grid_item {
+  height: 110%;
+  width: 100%;
+  top: 0;
+  background-color: #141516;
+  border: 1px solid white;
+}
+
+#span1::before,
+#span2::before,
+#span3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: black;
+  /* border-right: 1px solid white; */
+}
+
+#span1::before {
+  transform: translateX(var(--translate-before1));
+}
+
+#span2::before {
+  transform: translateX(var(--translate-before2));
+}
+
+#span3::before {
+  transform: translateX(var(--translate-before3));
+}
+
+.about-header {
+  font-family: August, sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2vw;
+  width: 100%;
+  line-height: 1.5rem;
+  height: clamp(2.5rem, 5vw, 5rem);
+  margin-bottom: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #f0f1fa;
+}
+
+.image {
+  /* filter: sepia(100%) saturate(500%) hue-rotate(260deg) brightness(100%) contrast(100%); */
+
+  filter: sepia(100%) saturate(500%) hue-rotate(220deg); /* turn the image green by desaturating it and shifting the colors by 120 degrees towards green, then increase the saturation to show only the green color */
+}
+
+.image:hover {
+  filter: none; /* turn the image green by desaturating it and shifting the colors by 120 degrees towards green, then increase the saturation to show only the green color */
+}
+
+.exp-img {
+  position: relative;
+  background-image: linear-gradient(133.655deg, transparent, rgba(0, 0, 0, 0.6)),
+    url("/grid.webp");
+}
+
+.exp-img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    calc(350 * 0.5) calc(350 * 0.5) at calc(1613 * 1px) calc(581 * 1px),
+    #233554,
+    transparent 100%
+  );
+}
+
+#line_about {
+  stroke: url(#gradient);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.work-header {
+  font-family: August, sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2vw;
+  width: 100%;
+  line-height: 1.5rem;
+  height: clamp(2.5rem, 5vw, 5rem);
+  margin-bottom: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #0a192f;
 }
