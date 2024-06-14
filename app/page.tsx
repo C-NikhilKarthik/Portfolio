@@ -2,7 +2,6 @@
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Landing from "@/components/Landing";
-import MainScene from "@/components/MainScene";
 import PreLoader from "@/components/Preloader";
 import ScrollProgress from "@/components/ScrollProgress";
 import Works from "@/components/Works";

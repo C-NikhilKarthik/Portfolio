@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-import dynamic from "next/dynamic";
+import React from "react";
 import Navbar from "./Navbar";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-const Scene = dynamic(() => import("@/components/Scene"), {
-  ssr: false,
-});
 
 export default function Landing() {
   // useEffect(() => {
