@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Landing from "@/components/Landing";
 import MainScene from "@/components/MainScene";
 import PreLoader from "@/components/Preloader";
+import ScrollProgress from "@/components/ScrollProgress";
 import Works from "@/components/Works";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -30,6 +31,7 @@ export default function Home() {
         {isLoading && <PreLoader />}
       </AnimatePresence>
       {/* {!isLoading && <MainScene />} */}
+      <ScrollProgress />
       <Landing />
       <About />
       <Works />

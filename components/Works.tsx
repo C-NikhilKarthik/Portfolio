@@ -20,7 +20,7 @@ export default function Works() {
       "#work",
       { backgroundColor: "#fff" },
       {
-        backgroundColor: "#ddccff",
+        backgroundColor: "#ccd6f6",
         duration: 1,
         transitionProperty: "background-color",
       }

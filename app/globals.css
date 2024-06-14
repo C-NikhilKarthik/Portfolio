@@ -51,9 +51,9 @@
 .header-main {
   font-family: August, sans-serif;
   color: #0a192f;
-  -webkit-text-stroke: 2.5px #6c757d;
-  font-size: min(18rem, 16vw);
-  height: min(27rem, 20vw);
+  -webkit-text-stroke: 2.5px #8892b0;
+  font-size: min(20rem, 25vw);
+  height: min(22rem, 25vw);
   letter-spacing: -0.2vw;
   text-transform: uppercase;
   text-align: center;
@@ -128,7 +128,8 @@ body {
 .image {
   /* filter: sepia(100%) saturate(500%) hue-rotate(260deg) brightness(100%) contrast(100%); */
 
-  filter: sepia(100%) saturate(500%) hue-rotate(220deg); /* turn the image green by desaturating it and shifting the colors by 120 degrees towards green, then increase the saturation to show only the green color */
+  /* filter: sepia(100%) saturate(500%) hue-rotate(220deg); */
+  filter: sepia(81%) saturate(152%) hue-rotate(75deg);
 }
 
 .image:hover {
@@ -172,4 +173,21 @@ body {
   margin-bottom: 2rem;
   color: transparent;
   -webkit-text-stroke: 2px #0a192f;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.located {
+  font-family: Clash, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #0a192f;
 }
