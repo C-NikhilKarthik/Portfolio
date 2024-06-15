@@ -27,7 +27,7 @@ export default function Footer() {
               strokeDashoffset="0px"
             ></path>
           </svg>
-          <div className="bg-[#091631f2]  relative font-clash text-white py-16 px-12 md:py-8 h-full w-full flex flex-col items-center md:justify-center">
+          <div className="bg-[#100d12f2]  relative font-clash text-white py-16 px-12 md:py-8 h-full w-full flex flex-col items-center md:justify-center">
             <div className="relative w-[90%] h-[30%]">
               <div className="h-full w-full py-10 flex flex-col relative justify-center items-center gap-5">
                 <span className="text-[length:2rem] text-center">

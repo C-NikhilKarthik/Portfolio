@@ -116,9 +116,13 @@ export default function Navbar() {
         variants={navbarColors}
         initial={false}
         animate={open ? "open" : "closed"}
-        className="w-full fixed top-0 left-0 p-4 z-20 flex font-clash backdrop-blur text-[#0a192f] bg-[#f8f9fa00] justify-between items-center"
+        className="w-full fixed top-0 left-0 p-4 md:px-10 lg:px-24 z-20 flex font-clash backdrop-blur text-light-text bg-[#f8f9fa00] justify-between items-center"
       >
         <div className="text-xl font-semibold">Nikhil Karthik</div>
+
+        <div className="flex gap-6 absolute left-1/2 -translate-x-1/2">
+          <p className="font-AtylDisplay">Based in Bengaluru, India</p>
+        </div>
 
         <div className="cursor-pointer">
           {!open && <RxHamburgerMenu onClick={() => setOpen(!open)} />}
@@ -136,7 +140,7 @@ export default function Navbar() {
           <motion.div
             key={i}
             custom={i}
-            className="w-full h-full bg-gradient-to-b from-[#020c1b] to-[#233554]"
+            className="w-full h-full bg-gradient-to-b from-[#12131a] to-[#1d232c]"
             variants={gridVariants}
           ></motion.div>
         ))}

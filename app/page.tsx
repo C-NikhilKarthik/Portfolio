@@ -25,7 +25,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex relative flex-col items-center">
+    <main className="flex relative flex-col bg-main items-center">
       <AnimatePresence mode="wait">
         {isLoading && <PreLoader />}
       </AnimatePresence>

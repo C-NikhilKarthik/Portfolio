@@ -42,7 +42,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="p-4 pb-10 px-10 h-full overflow-hidden min-h-screen rounded-t-2xl relative bg-gradient-to-b from-[#020c1b] to-[#233554] text-[var(--background-rgb)] flex justify-center w-full"
+      className="p-4 pb-10 px-10 h-full overflow-hidden min-h-screen rounded-t-2xl relative bg-gradient-to-b from-[#100d12] via-[#12131a] to-[#1d232c] text-[var(--background-rgb)] flex justify-center w-full"
     >
       <svg
         className="w-screen absolute h-screen bg-transparent z-1 left-1/2 top-0 -translate-x-1/2"
@@ -51,8 +51,8 @@ export default function About() {
       >
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="30%" stopColor="#64ffda"></stop>
-            <stop offset="100%" stopColor="#e6f1ff"></stop>
+            <stop offset="30%" stopColor="#8a84e3"></stop>
+            <stop offset="100%" stopColor="#b892ff"></stop>
           </linearGradient>
         </defs>
         <path
@@ -75,7 +75,7 @@ export default function About() {
               className="relative rounded z-[2] cursor-pointer image transition-[filter] duration-500
                         after:top-6 after:rounded-md after:left-6 w-full md:max-w-[300px] 
                         after:block after:w-full after:h-full after:border-4 after:-z-[1]
-                      after:border-[#66fcf1] after:absolute hover:after:top-2 after:duration-500 after:transition-[top,left] hover:after:left-2"
+                      after:border-[#8a84e3] after:absolute hover:after:top-2 after:duration-500 after:transition-[top,left] hover:after:left-2"
             >
               <Image
                 width={0}

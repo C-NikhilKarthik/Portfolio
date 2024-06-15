@@ -28,7 +28,7 @@ export default function ScrollProgress() {
       className="h-[20vh] w-[8px] fixed right-3 top-1/2 -translate-y-1/2 z-30 bg-[#1415164d] rounded-full backdrop-blur"
     >
       <div
-        className="bg-[#64ffda] w-full flex top-0 relative rounded-full"
+        className="bg-[#8a84e3] w-full flex top-0 relative rounded-full"
         style={{
           height: `${scrollPercentage}%`,
         }}

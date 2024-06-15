@@ -8,6 +8,16 @@
 }
 
 @font-face {
+  font-family: AtypDisplay;
+  src: url("/fonts/AtypDisplay.otf") format("topentype");
+}
+
+@font-face {
+  font-family: DrukWide;
+  src: url("/fonts/DrukWide.otf") format("opentype");
+}
+
+@font-face {
   font-family: Clash;
   src: url("/fonts/ClashDisplay-Regular.otf") format("opentype");
 }
@@ -23,6 +33,14 @@
   --color3: #343a40;
 }
 
+.font-atypdisplay {
+  font-family: AtypDisplay, sans-serif;
+}
+
+.font-drukwide {
+  font-family: DrukWide, sans-serif;
+}
+
 .font-august {
   font-family: August, sans-serif;
 }
@@ -32,8 +50,8 @@
 }
 
 .header1 {
-  font-family: August, sans-serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-family: DrukWide, sans-serif;
+  font-size: clamp(24px, 10vw, 36px);
   text-transform: uppercase;
   display: inline-flex;
   justify-content: center;
@@ -42,18 +60,16 @@
   gap: 0.2vw;
   width: 100%;
   line-height: 1.5rem;
-  height: clamp(2.5rem, 5vw, 5rem);
   margin-bottom: 2rem;
   color: transparent;
-  -webkit-text-stroke: 2px #212529;
+  -webkit-text-stroke: 2px #d3d4d6;
 }
 
 .header-main {
-  font-family: August, sans-serif;
-  color: #0a192f;
-  -webkit-text-stroke: 2.5px #8892b0;
-  font-size: min(20rem, 25vw);
-  height: min(22rem, 25vw);
+  font-family: DrukWide, sans-serif;
+  color: #8a84e3;
+  /* -webkit-text-stroke: 2.5px #8892b0; */
+  font-size: clamp(44px, 16vw, 90px);
   letter-spacing: -0.2vw;
   text-transform: uppercase;
   text-align: center;
@@ -129,7 +145,8 @@ body {
   /* filter: sepia(100%) saturate(500%) hue-rotate(260deg) brightness(100%) contrast(100%); */
 
   /* filter: sepia(100%) saturate(500%) hue-rotate(220deg); */
-  filter: sepia(81%) saturate(152%) hue-rotate(75deg);
+  filter: sepia(100%) saturate(400%) hue-rotate(225deg);
+  /* filter: sepia(81%) saturate(152%) hue-rotate(75deg); */
 }
 
 .image:hover {
@@ -172,7 +189,7 @@ body {
   height: clamp(2.5rem, 5vw, 5rem);
   margin-bottom: 2rem;
   color: transparent;
-  -webkit-text-stroke: 2px #0a192f;
+  -webkit-text-stroke: 2px #ffffff;
 }
 
 ::-webkit-scrollbar {

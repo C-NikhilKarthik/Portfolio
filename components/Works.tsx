@@ -18,9 +18,9 @@ export default function Works() {
     // First animation
     tl.fromTo(
       "#work",
-      { backgroundColor: "#fff" },
+      { backgroundColor: "#1d232c" },
       {
-        backgroundColor: "#ccd6f6",
+        backgroundColor: "#12131a",
         duration: 1,
         transitionProperty: "background-color",
       }
@@ -31,13 +31,13 @@ export default function Works() {
       <div className="w-full mx-auto max-w-[1200px] px-10 flex flex-col gap-20">
         <p className="work-header pt-20">Selected Work</p>
 
-        <div className="flex flex-col font-clash text-[#233554] border-t border-[#0a192f]">
+        <div className="flex flex-col font-clash text-[#233554] border-t border-light-text">
           <Link
             href={"/"}
-            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-[#0a192f]"
+            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-light-text"
           >
             <div className="w-full flex z-[4] justify-between flex-col md:flex-row gap-4 items-center py-10">
-              <p className="text-4xl font-bold">IIIT Dharwad</p>
+              <p className="text-4xl font-bold text-light-text">IIIT Dharwad</p>
               <p className="text-sm text-[#8892b0]">
                 Design & Development © 2024
               </p>
@@ -46,10 +46,10 @@ export default function Works() {
           </Link>
           <Link
             href={"/"}
-            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-[#0a192f]"
+            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-light-text"
           >
             <div className="w-full flex z-[4] justify-between flex-col md:flex-row gap-4 items-center py-10">
-              <p className="text-4xl font-bold">IIIT Dharwad</p>
+              <p className="text-4xl font-bold text-light-text">IIIT Dharwad</p>
               <p className="text-sm text-[#8892b0]">
                 Design & Development © 2024
               </p>
@@ -58,10 +58,10 @@ export default function Works() {
           </Link>
           <Link
             href={"/"}
-            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-[#0a192f]"
+            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-light-text"
           >
             <div className="w-full flex z-[4] justify-between flex-col md:flex-row gap-4 items-center py-10">
-              <p className="text-4xl font-bold">IIIT Dharwad</p>
+              <p className="text-4xl font-bold text-light-text">IIIT Dharwad</p>
               <p className="text-sm text-[#8892b0]">
                 Design & Development © 2024
               </p>
@@ -70,10 +70,10 @@ export default function Works() {
           </Link>
           <Link
             href={"/"}
-            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-[#0a192f]"
+            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-light-text"
           >
             <div className="w-full flex z-[4] justify-between flex-col md:flex-row gap-4 items-center py-10">
-              <p className="text-4xl font-bold">IIIT Dharwad</p>
+              <p className="text-4xl font-bold text-light-text">IIIT Dharwad</p>
               <p className="text-sm text-[#8892b0]">
                 Design & Development © 2024
               </p>
@@ -82,10 +82,10 @@ export default function Works() {
           </Link>
           <Link
             href={"/"}
-            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-[#0a192f]"
+            className="w-full group relative px-0 hover:px-12 transition-[padding] duration-500 flex items-center border-b border-light-text"
           >
             <div className="w-full flex z-[4] justify-between flex-col md:flex-row gap-4 items-center py-10">
-              <p className="text-4xl font-bold">IIIT Dharwad</p>
+              <p className="text-4xl font-bold text-light-text">IIIT Dharwad</p>
               <p className="text-sm text-[#8892b0]">
                 Design & Development © 2024
               </p>
