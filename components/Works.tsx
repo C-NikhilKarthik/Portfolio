@@ -18,7 +18,7 @@ export default function Works() {
     // First animation
     tl.fromTo(
       "#work",
-      { backgroundColor: "#1d232c" },
+      { backgroundColor: "#141820" },
       {
         backgroundColor: "#12131a",
         duration: 1,
@@ -27,7 +27,7 @@ export default function Works() {
     );
   }, []);
   return (
-    <section id="work" className="py-20 w-full overflow-hidden flex">
+    <section id="work" className="py-20 w-full z-[5] overflow-hidden flex">
       <div className="w-full mx-auto max-w-[1200px] px-10 flex flex-col gap-20">
         <p className="work-header pt-20">Selected Work</p>
 
@@ -42,7 +42,7 @@ export default function Works() {
                 Design & Development © 2024
               </p>
             </div>
-            <div className="bg-[#3214691f] h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
+            <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
           </Link>
           <Link
             href={"/"}
@@ -54,7 +54,7 @@ export default function Works() {
                 Design & Development © 2024
               </p>
             </div>
-            <div className="bg-[#3214691f] h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
+            <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
           </Link>
           <Link
             href={"/"}
@@ -66,7 +66,7 @@ export default function Works() {
                 Design & Development © 2024
               </p>
             </div>
-            <div className="bg-[#3214691f] h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
+            <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
           </Link>
           <Link
             href={"/"}
@@ -78,7 +78,7 @@ export default function Works() {
                 Design & Development © 2024
               </p>
             </div>
-            <div className="bg-[#3214691f] h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
+            <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
           </Link>
           <Link
             href={"/"}
@@ -90,7 +90,7 @@ export default function Works() {
                 Design & Development © 2024
               </p>
             </div>
-            <div className="bg-[#3214691f] h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
+            <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
           </Link>
         </div>
       </div>

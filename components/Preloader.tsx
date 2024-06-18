@@ -67,7 +67,7 @@ export default function Index() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-screen flex items-center justify-center fixed z-[99] bg-black"
+      className="h-screen w-screen flex items-center font-atypdisplay justify-center fixed z-[99] bg-gradient-to-b from-[#12131a] to-[#1d232c]"
     >
       {dimension.width > 0 && (
         <>
@@ -76,15 +76,22 @@ export default function Index() {
             initial="initial"
             className="flex text-white text-5xl items-center relative z-[1] after:content-[']'] after:block after:ml-3 after:scale-150 before:content-['['] before:block before:mr-3 before:scale-150"
             animate="enter"
+            style={{ fontFamily: "AtypDisplay, sans-serif" }}
           >
             {words[index]}
           </motion.p>
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#12131a" />
+                <stop offset="100%" stopColor="#1d232c" />
+              </linearGradient>
+            </defs>
             <motion.path
               variants={curve}
               initial="initial"
               exit="exit"
-              className="fill-black"
+              fill="url(#gradient)"
             ></motion.path>
           </svg>
         </>

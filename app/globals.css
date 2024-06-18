@@ -51,7 +51,7 @@
 
 .header1 {
   font-family: DrukWide, sans-serif;
-  font-size: clamp(24px, 10vw, 36px);
+  font-size: clamp(18px, 6vw, 36px);
   text-transform: uppercase;
   display: inline-flex;
   justify-content: center;
@@ -69,13 +69,14 @@
   font-family: DrukWide, sans-serif;
   color: #8a84e3;
   /* -webkit-text-stroke: 2.5px #8892b0; */
-  font-size: clamp(44px, 16vw, 90px);
+  font-size: clamp(44px, 8vw, 90px);
   letter-spacing: -0.2vw;
   text-transform: uppercase;
   text-align: center;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  line-height: 1.1;
   gap: 2vw;
   margin-top: -2vh;
   /* text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2),
@@ -207,4 +208,14 @@ body {
   color: transparent;
   text-transform: uppercase;
   -webkit-text-stroke: 1px #0a192f;
+}
+
+.about-para {
+  font-family: AtypDisplay, sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+  .about-para {
+    font-family: DrukWide, sans-serif;
+  }
 }

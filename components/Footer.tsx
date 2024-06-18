@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="h-[85vh] z-[-1] w-full relative"
+      className="h-[85vh] w-full relative"
       style={{ clipPath: "polygon(0% 0, 100% 0, 100% 100% 0 100%)" }}
     >
       <div className="h-[185vh] w-full relative -top-[100vh]">
         <div className="h-[85vh] w-full sticky top-[15vh] overflow-hidden">
           <svg
-            className="bg-transparent w-1/5 h-auto absolute top-[120px] right-[-20px] rotate-[20deg]"
+            className="bg-transparent z-[1] w-1/5 h-auto absolute top-[120px] right-[-20px] rotate-[20deg]"
             width="324"
             height="187"
             viewBox="0 0 324 187"
