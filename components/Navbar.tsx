@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+"use client";
+import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -77,38 +76,6 @@ const navItemVariants = {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#about",
-        start: "top top",
-        scrub: 1,
-      },
-    });
-
-    // First animation
-    tl.to("#navbar", {
-      color: "#f0f1fa",
-      transitionProperty: "color",
-    });
-
-    const t2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#work",
-        start: "top top",
-        scrub: 1,
-      },
-    });
-
-    // First animation
-    t2.to("#navbar", {
-      color: "#0a192f",
-      transitionProperty: "color",
-    });
-  }, []);
-
   return (
     <>
       <motion.nav
@@ -120,7 +87,7 @@ export default function Navbar() {
       >
         <div className="text-xl font-semibold">Nikhil Karthik</div>
 
-        <div className="flex gap-6 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden md:flex gap-6 absolute left-1/2 -translate-x-1/2">
           <p className="font-AtylDisplay">Based in Bengaluru, India</p>
         </div>
 
@@ -152,7 +119,7 @@ export default function Navbar() {
           variants={sidebarVariants}
         >
           <div className="flex text-[#f0f1fa] font-august items-center flex-col w-full">
-            <span className="text-[#ccd6f6] font-clash text-[length:1em]">
+            <span className="text-[#a1b7ff] font-clash text-[length:1em]">
               Navigation
             </span>
             {["Home", "About", "Work", "Contact"].map((text, index) => (
@@ -174,21 +141,32 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="absolute bottom-0 justify-between text-[#f0f1fa] w-full p-10 gap-4 flex flex-col-reverse md:flex-row">
-            <div className="flex gap-[10px] items-center md:items-start">
-              <div className="flex flex-col gap-4">
-                <p style={{ color: "gray" }}>Version</p>
-                <div className="">2.0.0 © 2024</div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <p style={{ color: "gray" }}>Resource</p>
-                <div className="">Portfolio v1.0.0</div>
+          <div className="absolute bottom-0 justify-between text-[#fafbff] font-clash w-full py-10 px-5 gap-4 flex flex-col-reverse md:flex-row">
+            <div className="font-AtylDisplay text-center border-t border-[#a1b7ff6e] md:border-0 pt-4 flex flex-col gap-5">
+              <div>Based in Bengaluru, India</div>
+              <div className="bg-[#a1b7ff0d] border border-[#a1b7ff46] backdrop-blur flex w-full justify-center p-[14px] gap-[11px]">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="8"
+                    cy="8"
+                    r="7.5"
+                    stroke="#03FF93"
+                    stroke-opacity="0.3"
+                  />
+                  <circle cx="8" cy="8" r="3" fill="#03FF93" />
+                </svg>
+                <div className="font-atypdisplay text-[#fafbff]">Available</div>
               </div>
             </div>
-            <div className="flex gap-4 flex-col items-center md:items-end">
-              <p style={{ color: "gray", width: "fit-content" }}>
-                Social Media
-              </p>
+
+            <div className="flex gap-3 flex-col items-center md:items-end">
+              <p className="text-[#a1b7ff]">Social Media</p>
               <div className="flex gap-[10px]">
                 <div className="">GitHub</div>
                 <div className="">LinkedIn</div>

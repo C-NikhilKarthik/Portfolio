@@ -30,10 +30,13 @@ export default function Home() {
         {isLoading && <PreLoader />}
       </AnimatePresence>
       {/* {!isLoading && <MainScene />} */}
-      <ScrollProgress />
-      <Landing />
-      <About />
-      <Works />
+      <div className="z-[5]">
+        <ScrollProgress />
+        <Landing />
+        <About />
+        <Works />
+      </div>
+
       <Footer />
     </main>
   );

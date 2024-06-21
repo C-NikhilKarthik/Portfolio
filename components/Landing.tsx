@@ -39,7 +39,7 @@ export default function Landing() {
       ></div>
       <Navbar />
       <div className="absolute bg-[url('/hero-bg.svg')] bg-cover h-full w-full z-[2]"></div>
-      <div className="flex z-[3] flex-col">
+      <div className="flex z-[3] flex-col -top-20 md:top-0 relative">
         <div className="header1">software Developer</div>
         <div className="header-main">Nikhil Karthik</div>
       </div>
