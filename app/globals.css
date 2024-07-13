@@ -8,8 +8,13 @@
 }
 
 @font-face {
+  font-family: Rooftop;
+  src: url("/fonts/Rooftop.otf") format("opentype");
+}
+
+@font-face {
   font-family: AtypDisplay;
-  src: url("/fonts/AtypDisplay.otf") format("topentype");
+  src: url("/fonts/AtypDisplay.otf") format("opentype");
 }
 
 @font-face {
@@ -31,6 +36,10 @@
   --color1: #6c757d;
   --color2: #adb5bd;
   --color3: #343a40;
+}
+
+.font-rooftop {
+  font-family: Rooftop, sans-serif;
 }
 
 .font-atypdisplay {

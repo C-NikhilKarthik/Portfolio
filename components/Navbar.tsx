@@ -157,11 +157,13 @@ export default function Navbar() {
                     cy="8"
                     r="7.5"
                     stroke="#03FF93"
-                    stroke-opacity="0.3"
+                    strokeOpacity="0.3"
                   />
                   <circle cx="8" cy="8" r="3" fill="#03FF93" />
                 </svg>
-                <div className="font-atypdisplay text-[#fafbff]">Available</div>
+                <div className="font-atypdisplay text-[#fafbff]">
+                  Available for Work
+                </div>
               </div>
             </div>
 

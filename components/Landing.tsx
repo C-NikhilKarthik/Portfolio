@@ -44,7 +44,7 @@ export default function Landing() {
         <div className="header-main">Nikhil Karthik</div>
       </div>
       <div className="absolute z-[3] bottom-[44px] md:bottom-[88px] w-full flex items-center justify-center">
-        <div className="gap-10 flex flex-col w-[280px] font-AtypDisplay">
+        <div className="gap-10 flex flex-col w-[320px] font-rooftop">
           <div className="flex w-full justify-between text-main-text text-[length:16px]">
             <p className="">[About</p>
             <p className="">me]</p>

@@ -9,98 +9,40 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import Paragraph from "@/components/Character";
 import Image from "next/image";
-import gsap from "gsap";
-import SplitText from "gsap-trial/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function About() {
   // const imageControls = useAnimation();
 
-  useEffect(() => {
-    const splitAbsolute = new SplitText("#about-behind", {
-      type: "words,chars",
-    });
+  const element = useRef(null);
+  const photo = useRef(null);
 
-    const mySplitText = new SplitText("#about-text", { type: "words,chars" });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#about-main",
-        start: "top top",
-        end: "center center",
-        scrub: 1,
-      },
-    });
+  const { scrollYProgress: elementScrollYProgress } = useScroll({
+    target: element,
+    offset: ["start start", "0.4 end"],
+  });
 
-    tl.from(splitAbsolute.chars, {});
+  const { scrollYProgress: textScrollYProgress } = useScroll({
+    target: element,
+    offset: ["0.4 start", "0.6 end"],
+  });
 
-    tl.fromTo(
-      mySplitText.chars,
-      {
-        opacity: 0,
-        scale: 1.3,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        stagger: 0.1,
-      }
-    );
+  // Photo animation starts after character animation
+  const { scrollYProgress: photoScrollYProgress } = useScroll({
+    target: element,
+    offset: ["0.6 start", "0.9 end"],
+  });
 
-    tl.fromTo(
-      "#about2",
-      {
-        opacity: 0,
-        translateY: "100%",
-      },
-      {
-        opacity: 1,
-        translateY: 0,
-        duration: 1.5,
-      },
-      ">"
-    );
+  const y = useTransform(photoScrollYProgress, [0, 1], [200, 0]);
+  const scale = useTransform(photoScrollYProgress, [0, 1], [0.5, 1]);
+  const opacity = useTransform(photoScrollYProgress, [0, 1], [0, 1]);
 
-    tl.fromTo(
-      "#photo",
-      {
-        scale: 0.3,
-        opacity: 0,
-        translateY: "40vh",
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        translateY: 0,
-        duration: 2,
-      },
-      "+=1"
-    );
-
-    tl.to(
-      "#text-span",
-      {
-        translateY: -100,
-        duration: 2,
-      },
-      "-=2" // Adjust the timing as needed
-    );
-
-    tl.to(
-      "#about2",
-      {
-        translateY: -100,
-        duration: 2,
-      },
-      "<" // Adjust the timing as needed
-    );
-  }, []);
-
+  const y_text = useTransform(textScrollYProgress, [0, 1], [200, 0]);
+  const opacity_text = useTransform(textScrollYProgress, [0, 1], [0, 1]);
   return (
     <>
-      <div id="about-main" className="relative w-full h-[450vh]">
+      <div id="about" ref={element} className="relative w-full h-[500vh]">
         <section
+          ref={photo}
           id="about"
           className="sticky top-0 flex items-center justify-center min-h-[100vh] overflow-hidden bg-[#141820]"
         >
@@ -110,27 +52,23 @@ export default function About() {
                 [Hi <div className="block w-8 h-[1px] bg-main-text"></div>{" "}
                 there]
               </div>
-              <span className="font-atypdisplay text-[length:24px] about-para md:text-[length:30px] lg:text-[length:36px]">
-                <span
-                  id="about-behind"
-                  className="absolute opacity-20 text-center max-w-[900px] text-main-text "
-                >
-                  I CRAFT EXCEPTIONAL DIGITAL EXPERIENCES. CREATING INNOVATIVE
-                  SOLUTIONS TO COMPLEX PROBLEMS.
-                </span>
-                <motion.span
-                  id="about-text"
-                  className="max-w-[900px] text-main-text text-center inline-block"
-                >
-                  I CRAFT EXCEPTIONAL DIGITAL EXPERIENCES. CREATING INNOVATIVE
-                  SOLUTIONS TO COMPLEX PROBLEMS.
-                </motion.span>
+              <span className="md:font-atypdisplay font-rooftop text-[length:24px] about-para md:text-[length:30px] lg:text-[length:36px]">
+                <Paragraph
+                  scrollYProgress={elementScrollYProgress}
+                  paragraph={
+                    "I CRAFT EXCEPTIONAL DIGITAL EXPERIENCES. CREATING INNOVATIVE SOLUTIONS TO COMPLEX PROBLEMS."
+                  }
+                />
               </span>
             </div>
           </div>
           <motion.div
             id="about2"
-            className="absolute bottom-3 gap-6 flex w-full max-w-[350px] items-center flex-col md:max-w-[500px] text-center transition-all justify-center"
+            style={{
+              translateY: y_text,
+              opacity: opacity_text,
+            }}
+            className="absolute bottom-6 gap-6 flex w-full max-w-[350px] items-center flex-col md:max-w-[500px] text-center transition-all justify-center"
           >
             <svg
               width="19"
@@ -151,7 +89,15 @@ export default function About() {
             </div>
           </motion.div>
 
-          <motion.div className="hidden md:flex absolute" id="photo">
+          <motion.div
+            className="hidden md:flex absolute"
+            id="photo"
+            style={{
+              translateY: y,
+              scale: scale,
+              opacity: opacity,
+            }}
+          >
             <Image
               height={0}
               width={0}
