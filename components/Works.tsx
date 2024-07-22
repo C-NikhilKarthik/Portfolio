@@ -14,12 +14,12 @@ const projects = [
   },
   {
     title: "Landing Page",
-    src: "LandingPage.png",
+    src: "Portfolio.png",
     color: "#8C8C8C",
   },
   {
     title: "SnapMark",
-    src: "LandingPage.jpeg",
+    src: "Snapmark.jpeg",
     color: "#EFE8D3",
   },
   {

@@ -40,7 +40,7 @@ export default function About() {
   const opacity_text = useTransform(textScrollYProgress, [0, 1], [0, 1]);
   return (
     <>
-      <div id="about" ref={element} className="relative w-full h-[500vh]">
+      <div id="about" ref={element} className="relative w-full z-[2] h-[500vh]">
         <section
           ref={photo}
           id="about"

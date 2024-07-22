@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Globe from "./Globe";
 
 const gridVariants = {
   open: (index: number) => ({
@@ -87,7 +88,10 @@ export default function Navbar() {
       >
         <div className="text-xl font-semibold">Nikhil Karthik</div>
 
-        <div className="hidden md:flex gap-6 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden md:flex gap-6 items-center absolute left-1/2 -translate-x-1/2">
+          <div className="relative w-[3rem] h-[3rem]">
+            <Globe />
+          </div>
           <p className="font-AtylDisplay">Based in Bengaluru, India</p>
         </div>
 

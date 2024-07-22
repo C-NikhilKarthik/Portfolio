@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Landing() {
   const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
+    x: typeof window !== "undefined" ? window.innerWidth / 2 : 0,
+    y: typeof window !== "undefined" ? window.innerHeight / 2 : 0,
   });
 
   useEffect(() => {
@@ -40,10 +41,29 @@ export default function Landing() {
       <Navbar />
       <div className="absolute bg-[url('/hero-bg.svg')] bg-cover h-full w-full z-[2]"></div>
       <div className="flex z-[3] flex-col -top-20 md:top-0 relative">
-        <div className="header1">software Developer</div>
-        <div className="header-main">Nikhil Karthik</div>
+        <motion.div
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 2.5, duration: 0.7, ease: "easeOut" }}
+          className="header1"
+        >
+          software Developer
+        </motion.div>
+        <motion.div
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 2.58, duration: 0.7, ease: "easeOut" }}
+          className="header-main"
+        >
+          Nikhil Karthik
+        </motion.div>
       </div>
-      <div className="absolute z-[3] bottom-[44px] md:bottom-[88px] w-full flex items-center justify-center">
+      <motion.div
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 2.6, duration: 0.6, ease: "easeOut" }}
+        className="absolute z-[3] bottom-[44px] md:bottom-[88px] w-full flex items-center justify-center"
+      >
         <div className="gap-10 flex flex-col w-[320px] font-rooftop">
           <div className="flex w-full justify-between text-main-text text-[length:16px]">
             <p className="">[About</p>
@@ -55,7 +75,7 @@ export default function Landing() {
             <p>digital experiences.</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
