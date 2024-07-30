@@ -52,7 +52,7 @@ export default function About() {
                 [Hi <div className="block w-8 h-[1px] bg-main-text"></div>{" "}
                 there]
               </div>
-              <span className="md:font-atypdisplay font-rooftop text-[length:24px] about-para md:text-[length:30px] lg:text-[length:36px]">
+              <span className="font-drukwide text-[length:24px] about-para md:text-[length:30px] lg:text-[length:36px]">
                 <Paragraph
                   scrollYProgress={elementScrollYProgress}
                   paragraph={

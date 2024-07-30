@@ -28,6 +28,7 @@
 }
 
 :root {
+  --section-padding: clamp(2em, 10vh, 6em);
   --foreground-rgb: #0a192f;
   --background-rgb: #e6f1ff;
   --translate-before1: 0;
@@ -37,6 +38,19 @@
   --color2: #adb5bd;
   --color3: #343a40;
   --color-white: #e6f1ff;
+}
+
+body {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  opacity: 0;
+  background: #100d12f2;
+  transform: translateY(40px);
+  filter: blur(12px);
 }
 
 .font-rooftop {
@@ -221,13 +235,7 @@ body {
 }
 
 .about-para {
-  font-family: AtypDisplay, sans-serif;
-}
-
-@media screen and (min-width: 1024px) {
-  .about-para {
-    font-family: DrukWide, sans-serif;
-  }
+  font-family: DrukWide, sans-serif;
 }
 
 .line-globe {
@@ -264,6 +272,11 @@ body {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   animation: digitalball 6s ease-in-out infinite;
+}
+
+.arc-heading {
+  padding-top: calc(var(--section-padding) * 1.33);
+  padding-bottom: calc(var(--section-padding) * 0.66);
 }
 
 .line-globe .digital-ball:hover .overlay {
@@ -391,4 +404,9 @@ body {
   height: 0.15em;
   background: var(--color-white);
   font-size: 0.75em;
+}
+
+nav {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }

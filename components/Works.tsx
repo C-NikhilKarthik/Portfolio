@@ -2,9 +2,10 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Project from "./Project";
 import Image from "next/image";
+import { TransitionLink } from "./TransitionLink";
 
 const projects = [
   {
@@ -133,7 +134,10 @@ export default function Works() {
   }, []);
 
   return (
-    <section id="work" className="py-20 w-full z-[5] overflow-hidden flex">
+    <section
+      id="work"
+      className="py-20 w-full z-[5] overflow-hidden relative flex flex-col"
+    >
       <div
         onMouseMove={(e) => {
           moveItems(e.clientX, e.clientY);
@@ -202,6 +206,13 @@ export default function Works() {
             </motion.div>
           </>
         </div>
+
+        <TransitionLink
+          className="bg-[#6b63dd] hover:bg-[#8a84e3] transition-all duration-300 font-bold font-clash hover:text-[#201c58] hover:px-8 rounded px-6 h-10 w-fit mx-auto flex items-center text-white"
+          href={"/archive"}
+        >
+          Archive
+        </TransitionLink>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 "use client";
 import About from "@/components/About";
+import Curve from "@/components/Curve";
 import Footer from "@/components/Footer";
 import Landing from "@/components/Landing";
 import PreLoader from "@/components/Preloader";
@@ -35,6 +36,7 @@ export default function Home() {
         <Landing />
         <About />
         <Works />
+        <Curve />
       </div>
 
       <Footer />
