@@ -56,18 +56,29 @@ export default function Page() {
               <h3 className="px-1 text-gray-400">Version</h3>
               <p className="px-1 cursor-pointer ">2024 © Edition</p>
             </span>
-            <span className="flex flex-col gap-4">
+            {/* <span className="flex flex-col gap-4">
               <h3 className="text-gray-400">Local Time</h3>
               <p>11:49 PM GMT+2</p>
-            </span>
+            </span> */}
           </div>
           <span className="flex border-b border-b-gray-500 md:border-b-0 flex-col gap-4 pb-4 md:pb-0 md:items-end">
             <h3 className="text-gray-400">Socials</h3>
             <div className="flex gap-4 flex-wrap">
-              <p>Instagram</p>
-              <p>Dribbble</p>
-              <p>Linkedin</p>
-              <p>Awwwards</p>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/nikhilkarthik24/"
+              >
+                Linkedin
+              </a>
+              <a target="_blank" href="https://www.x.com/@nikhilkarthik24/">
+                Twitter
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/nikhilkarthik_24/"
+              >
+                Instagram
+              </a>
             </div>
           </span>
         </div>

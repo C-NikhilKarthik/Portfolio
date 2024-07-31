@@ -26,12 +26,12 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex relative flex-col bg-main items-center">
+    <main className="flex relative flex-col w-full bg-main items-center">
       <AnimatePresence mode="wait">
         {isLoading && <PreLoader />}
       </AnimatePresence>
       {/* {!isLoading && <MainScene />} */}
-      <div className="z-[5]">
+      <div className="z-[5] w-full">
         <ScrollProgress />
         <Landing />
         <About />

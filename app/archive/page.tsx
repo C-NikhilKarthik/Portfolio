@@ -34,8 +34,10 @@ export default function page() {
             {Archives?.map((proj: archiveType, i) => (
               <li
                 key={i}
-                className="w-full  text-white hover:text-slate-500 transition-all duration-300"
+                className="w-full relative group flex flex-col justify-center text-white transition-all duration-300"
               >
+                <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
+
                 <div className="h-[1px] w-full bg-gray-500" />
                 <div className="py-[2em] flex w-full">
                   <div className="pl-6 lg:pl-[6vw] flex flex-col gap-4 md:justify-center text-left w-[76%] md:w-[44%]">

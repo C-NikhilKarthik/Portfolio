@@ -14,9 +14,9 @@ export default function Curve() {
     <motion.div
       ref={container}
       style={{ height }}
-      className="bg-red-500 w-full relative"
+      className="bg-red-500 w-full relative box-border"
     >
-      <div className="h-[1050%] w-[120%] -left-[10%] rounded-[0_0_50%_50%] bg-[#12131a] z-[5] absolute shadow-[0px_60px_50px_rgba(0,0,0,0.748)]"></div>
+      <div className="h-[1050%] w-[100%] rounded-[0_0_50%_50%] bg-[#12131a] z-[5] absolute shadow-[0px_60px_50px_rgba(0,0,0,0.748)]"></div>
     </motion.div>
   );
 }
