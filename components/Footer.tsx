@@ -15,9 +15,9 @@ export default function Page() {
     <motion.div
       style={{ y }}
       ref={container}
-      className="relative bg-[#100d12f2] z-[2] text-white w-full flex flex-col items-center justify-center"
+      className="relative bg-[#1C1D20] z-[2] text-white w-full flex flex-col items-center justify-center"
     >
-      <div className="pt-[200px] w-full max-w-[1800px] bg-[#100d12f2]">
+      <div className="pt-[200px] w-full max-w-[1800px] bg-[#1C1D20]">
         <div className="border-b border-b-gray-500 pb-[100px] mx-[40px] md:mx-[200px] relative">
           <span className="flex items-center">
             <h2 className="text-[5vw] leading-[1.1]">Let&apos;s work</h2>
@@ -46,9 +46,8 @@ export default function Page() {
             />
           </motion.svg>
         </div>
-        <div className="flex flex-col md:flex-row gap-5 mt-[100px] mx-[40px] md:mx-[200px]">
+        <div className="flex flex-col md:flex-row gap-5 border-gray-500 border w-fit px-6 py-4 rounded-full mt-[100px] mx-[40px] md:mx-[200px]">
           <p>nikhilkarthik241103@gmail.com</p>
-          <p>+91 99016 30824</p>
         </div>
         <div className="flex flex-col-reverse md:flex-row gap-4 justify-between mt-[200px] p-5">
           <div className="flex gap-[10px] items-end">

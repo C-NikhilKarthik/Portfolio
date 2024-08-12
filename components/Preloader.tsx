@@ -67,7 +67,7 @@ export default function Index() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-screen flex items-center font-atypdisplay justify-center fixed z-[99] bg-gradient-to-b from-[#12131a] to-[#1d232c]"
+      className="h-screen w-screen flex items-center font-atypdisplay justify-center fixed z-[99] bg-cover bg-no-repeat bg-gradient-to-b from-[#12131a] to-[#1d232c]"
     >
       {dimension.width > 0 && (
         <>
