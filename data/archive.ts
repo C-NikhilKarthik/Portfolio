@@ -8,10 +8,38 @@ export interface archiveType {
 
 export const Archives: archiveType[] = [
   {
+    project: "Bloom Fi (ETHIndia Winner)",
+    tech: ["HTML", "CSS", "Javascript", "The Graph", "Polygon", "Solidity"],
+    year: "2024",
+    Link: "https://devfolio.co/projects/bloomfi-a682",
+    GitHubLink: "https://github.com/ashith1101/BloomFi",
+  },
+  {
+    project: "IIIT Dharwad Conclave",
+    tech: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Figma", "Sanity"],
+    year: "2024",
+    Link: "https://conclave.iiitdwd.ac.in/",
+    GitHubLink: "https://github.com/Velocity-IIITDWD/conclave",
+  },
+  {
+    project: "MIRAX",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Elastic Search",
+      "Python",
+      "FastAPI",
+      "Flask",
+    ],
+    year: "2024",
+    GitHubLink: "https://github.com/C-NikhilKarthik/MIRAX",
+  },
+  {
     project: "IIIT Dharwad",
     tech: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Figma"],
     year: "2024",
     Link: "https://iiitdwd.ac.in/",
+    GitHubLink: "https://github.com/Velocity-IIITDWD/iiitdwd.ac.in",
   },
   {
     project: "Landing Page",

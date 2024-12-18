@@ -411,3 +411,18 @@ nav {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+
+section {
+  counter-reset: valCounter 0;
+}
+
+section .val {
+  counter-increment: valCounter;
+}
+
+section .val::before {
+  content: "0" counter(valCounter);
+  margin-right: 1.5rem;
+  font-size: clamp(16px, 3vw, 20px);
+  @apply text-gray-700;
+}

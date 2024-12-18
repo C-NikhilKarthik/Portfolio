@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
+import Link from "next/link";
 
 export default function Page() {
   const container = useRef(null);
@@ -27,9 +28,12 @@ export default function Page() {
             style={{ x }}
             className="absolute left-0 -translate-x-1/5 -translate-y-1/2"
           >
-            <button className="w-[150px] md:w-[180px] aspect-square bg-[#8a84e3] text-white rounded-full absolute flex items-center justify-center">
+            <Link
+              href={"/contact"}
+              className="w-[150px] md:w-[180px] aspect-square bg-[#8a84e3] text-white rounded-full absolute flex items-center justify-center"
+            >
               <p className="z-[2] relative">Get in touch</p>
-            </button>
+            </Link>
           </motion.div>
           <motion.svg
             style={{ rotate, scale: 2 }}

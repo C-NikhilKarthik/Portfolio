@@ -15,17 +15,17 @@ export default function page() {
         </h1>
 
         <div className="w-full bg-[#12131a] pb-10 md:px-[6vw] z-[5]">
-          <div className="w-full text-gray-400 flex pb-[clamp(1.5em,4vw,2.5em)]">
-            <div className="pl-6 lg:pl-[6vw] text-left w-[86%] md:w-[44%]">
+          <div className="w-full text-gray-400 grid grid-cols-[1fr,max-content] md:grid-cols-[1fr,1fr,max-content,max-content] pb-[clamp(1.5em,4vw,2.5em)]">
+            <div className="pl-6 lg:pl-[6vw] text-left">
               <h5>Project</h5>
             </div>
-            <div className="w-[32%] hidden md:flex">
+            <div className="hidden md:flex">
               <h5>Technologies</h5>
             </div>
-            <div className="w-[10%] hidden md:flex">
+            <div className="hidden md:flex w-[10vw]">
               <h5>Links</h5>
             </div>
-            <div className="w-[14%] pr-[6vw] text-right">
+            <div className="w-[25vw] md:w-[10vw] text-left">
               <h5>Year</h5>
             </div>
           </div>
@@ -39,8 +39,8 @@ export default function page() {
                 <div className="bg-main-text opacity-10 h-0 group-hover:h-full transition-[height] duration-500 absolute w-screen left-1/2 -translate-x-1/2 z-0"></div>
 
                 <div className="h-[1px] w-full bg-gray-500" />
-                <div className="py-[2em] flex w-full">
-                  <div className="pl-6 lg:pl-[6vw] flex flex-col gap-4 md:justify-center text-left w-[76%] md:w-[44%]">
+                <div className="py-[2em] w-full grid grid-cols-[1fr,max-content] md:grid-cols-[1fr,1fr,max-content,max-content]">
+                  <div className="pl-6 lg:pl-[6vw] flex flex-col gap-4 md:justify-center text-left">
                     <h5>{proj?.project}</h5>
                     <div className="w-full flex flex-wrap md:hidden gap-2">
                       {proj?.tech?.map((t, i) => (
@@ -53,7 +53,7 @@ export default function page() {
                       ))}
                     </div>
                   </div>
-                  <div className="w-[32%] hidden md:flex gap-3 pr-10 flex-wrap">
+                  <div className="hidden md:flex gap-3 pr-10 flex-wrap">
                     {proj?.tech?.map((t, i) => (
                       <div
                         key={i}
@@ -63,7 +63,7 @@ export default function page() {
                       </div>
                     ))}
                   </div>
-                  <div className="w-[10%] hidden md:flex gap-4 items-center text-right">
+                  <div className="w-[10vw] hidden z-[5] md:flex gap-4 text-right">
                     {proj?.Link && (
                       <a
                         href={proj?.Link}
@@ -85,8 +85,8 @@ export default function page() {
                       </a>
                     )}
                   </div>
-                  <div className="w-[24%] pr-[6vw] flex flex-col gap-6 text-right">
-                    <div className="flex md:hidden gap-4 items-center justify-end">
+                  <div className="w-[25vw] md:w-[10vw] flex flex-col gap-6 text-left">
+                    <div className="flex md:hidden gap-4 items-center">
                       {proj?.Link && (
                         <a
                           href={proj?.Link}

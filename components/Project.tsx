@@ -7,12 +7,18 @@ interface ProjectProps {
   index: number;
   title: string;
   manageModal: (active: boolean, index: number, x: number, y: number) => void;
+  link: string;
 }
 
-export default function Project({ index, title, manageModal }: ProjectProps) {
+export default function Project({
+  index,
+  title,
+  manageModal,
+  link,
+}: ProjectProps) {
   return (
     <Link
-      href={"/"}
+      href={link}
       onMouseEnter={(e) => {
         manageModal(true, index, e.clientX, e.clientY);
       }}

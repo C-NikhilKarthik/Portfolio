@@ -9,24 +9,28 @@ import { TransitionLink } from "./TransitionLink";
 
 const projects = [
   {
+    title: "IIIT Dharwad Conclave",
+    src: "Conclave.png",
+    color: "#706D63",
+    link: "https://conclave.iiitdwd.ac.in/",
+  },
+  {
     title: "IIIT Dharwad",
     src: "IIIT_Dharwad.png",
     color: "#000000",
+    link: "https://iiitdwd.ac.in/",
   },
   {
     title: "Landing Page",
     src: "Portfolio.png",
     color: "#8C8C8C",
+    link: "https://landingpage-portfoliov1.netlify.app/",
   },
   {
     title: "SnapMark",
     src: "Snapmark.jpeg",
     color: "#EFE8D3",
-  },
-  {
-    title: "BlogPenn",
-    src: "BlogPenn.png",
-    color: "#706D63",
+    link: "https://github.com/C-NikhilKarthik/MiniProject-6thSem",
   },
 ];
 
@@ -149,6 +153,7 @@ export default function Works() {
         <div className="flex flex-col font-clash text-[#233554] border-t border-light-text">
           {projects.map((project, index) => (
             <Project
+              link={project?.link}
               index={index}
               title={project.title}
               manageModal={manageModal}
